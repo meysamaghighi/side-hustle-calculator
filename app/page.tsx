@@ -261,7 +261,7 @@ export default function Home() {
             name: "Side Hustle Calculator",
             description:
               "Free side hustle calculator. Input your available hours and skills to get personalized side hustle recommendations with estimated monthly earnings.",
-            url: "https://sidehustlecalculator.net",
+            url: "https://side-hustle-calculator-xi.vercel.app",
             applicationCategory: "FinanceApplication",
             operatingSystem: "Any",
             offers: {

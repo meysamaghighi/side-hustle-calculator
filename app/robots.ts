@@ -6,6 +6,6 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: "*",
       allow: "/",
     },
-    sitemap: "https://sidehustlecalculator.net/sitemap.xml",
+    sitemap: "https://side-hustle-calculator-xi.vercel.app/sitemap.xml",
   };
 }

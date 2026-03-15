@@ -17,7 +17,7 @@ export const metadata: Metadata = {
   title: "Side Hustle Calculator | Find the Best Side Hustle for You",
   description:
     "Free side hustle calculator. Input your hours, skills, and preferences to get personalized recommendations with estimated monthly earnings. 30+ side hustles ranked.",
-  metadataBase: new URL("https://sidehustlecalculator.net"),
+  metadataBase: new URL("https://side-hustle-calculator-xi.vercel.app"),
   other: {
     "google-adsense-account": "ca-pub-2621005924235240",
   },

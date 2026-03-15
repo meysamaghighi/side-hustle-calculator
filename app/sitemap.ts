@@ -2,7 +2,7 @@ import type { MetadataRoute } from "next";
 import { sideHustles, getAllCategories } from "./lib/side-hustles";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const base = "https://sidehustlecalculator.net";
+  const base = "https://side-hustle-calculator-xi.vercel.app";
 
   return [
     {
