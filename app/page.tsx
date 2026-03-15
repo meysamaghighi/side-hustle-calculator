@@ -165,7 +165,7 @@ export default function Home() {
         <h2 className="text-2xl font-bold text-gray-900 mb-4">
           Finding the Best Side Hustle in 2026
         </h2>
-        <div className="prose prose-gray max-w-none">
+        <div className="max-w-none text-gray-700 leading-relaxed space-y-4">
           <p>
             Whether you want to pay off debt, build an emergency fund, or reach
             financial independence, a side hustle can accelerate your goals. The

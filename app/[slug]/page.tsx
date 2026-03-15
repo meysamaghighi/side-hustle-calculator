@@ -142,13 +142,13 @@ export default async function HustlePage({
                     <td className="px-4 py-3 font-bold text-emerald-600">
                       {h} hours
                     </td>
-                    <td className="px-4 py-3">
+                    <td className="px-4 py-3 text-gray-800">
                       ${(hustle.hourlyLow * h).toLocaleString()}
                     </td>
-                    <td className="px-4 py-3">
+                    <td className="px-4 py-3 text-gray-800">
                       ${(hustle.hourlyHigh * h).toLocaleString()}
                     </td>
-                    <td className="px-4 py-3">
+                    <td className="px-4 py-3 text-gray-800">
                       ${Math.round(hustle.hourlyLow * h * 4.33).toLocaleString()}
                     </td>
                     <td className="px-4 py-3 font-semibold text-emerald-600">
