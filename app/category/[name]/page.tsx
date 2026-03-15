@@ -9,13 +9,14 @@ export function generateStaticParams() {
   return getAllCategories().map((cat) => ({ name: categorySlug(cat) }));
 }
 
-export function generateMetadata({
+export async function generateMetadata({
   params,
 }: {
-  params: { name: string };
-}): Metadata {
+  params: Promise<{ name: string }>;
+}): Promise<Metadata> {
+  const { name } = await params;
   const category = getAllCategories().find(
-    (cat) => categorySlug(cat) === params.name
+    (cat) => categorySlug(cat) === name
   );
   if (!category) return {};
 
@@ -26,13 +27,14 @@ export function generateMetadata({
   };
 }
 
-export default function CategoryPage({
+export default async function CategoryPage({
   params,
 }: {
-  params: { name: string };
+  params: Promise<{ name: string }>;
 }) {
+  const { name } = await params;
   const category = getAllCategories().find(
-    (cat) => categorySlug(cat) === params.name
+    (cat) => categorySlug(cat) === name
   );
   if (!category) notFound();
 

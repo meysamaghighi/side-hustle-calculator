@@ -7,12 +7,13 @@ export function generateStaticParams() {
   return sideHustles.map((h) => ({ slug: h.slug }));
 }
 
-export function generateMetadata({
+export async function generateMetadata({
   params,
 }: {
-  params: { slug: string };
-}): Metadata {
-  const hustle = getHustleBySlug(params.slug);
+  params: Promise<{ slug: string }>;
+}): Promise<Metadata> {
+  const { slug } = await params;
+  const hustle = getHustleBySlug(slug);
   if (!hustle) return {};
 
   return {
@@ -29,15 +30,19 @@ export function generateMetadata({
   };
 }
 
-export default function HustlePage({ params }: { params: { slug: string } }) {
-  const hustle = getHustleBySlug(params.slug);
+export default async function HustlePage({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}) {
+  const { slug } = await params;
+  const hustle = getHustleBySlug(slug);
   if (!hustle) notFound();
 
   const related = getHustlesByCategory(hustle.category).filter(
     (h) => h.slug !== hustle.slug
   );
 
-  const avgHourly = (hustle.hourlyLow + hustle.hourlyHigh) / 2;
   const hours = [5, 10, 15, 20, 30];
 
   const diffColor = {
